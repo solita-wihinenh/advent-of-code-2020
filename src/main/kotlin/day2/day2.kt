@@ -5,8 +5,10 @@ import java.io.File
 fun main(args: Array<String>) {
     println("Day 2 - Start!")
     val passwords = loadData("src/main/resources/day2.txt")
+
     val part1validPasswords = getValidPasswords(passwords, ::part1validatePassword)
     println("Part 1 - Amount of valid passwords: ${part1validPasswords.count()}")
+
     val part2validPasswords = getValidPasswords(passwords, ::part2validatePassword)
     println("Part 2 - Amount of valid passwords: ${part2validPasswords.count()}")
 }

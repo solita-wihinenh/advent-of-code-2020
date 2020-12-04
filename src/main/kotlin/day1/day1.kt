@@ -5,7 +5,9 @@ import java.io.File
 fun main(args: Array<String>) {
     println("Day 1 - Start!");
     val numbers = loadData("src/main/resources/day1.txt");
+
     println("Part 1 - 2 numbers, product: " + findProductForSum(numbers,2, 2020));
+
     println("Part 2 - 3 numbers, product: " + findProductForSum(numbers,3, 2020));
 }
 
