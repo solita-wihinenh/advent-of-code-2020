@@ -129,8 +129,8 @@ internal class Day4KtTest {
                 Pair("hcl", "74454a"),
             ),
         )
-        assertEquals(countValidPassports(part1Passports, part1fieldRegexes), 2);
-        assertEquals(countValidPassports(part2validPassports, part2fieldRegexes), part2validPassports.count());
-        assertEquals(countValidPassports(part2invalidPassports, part2fieldRegexes), 0);
+        assertEquals(2, countValidPassports(part1Passports, part1fieldRegexes));
+        assertEquals(part2validPassports.count(), countValidPassports(part2validPassports, part2fieldRegexes));
+        assertEquals(0, countValidPassports(part2invalidPassports, part2fieldRegexes));
     }
 }

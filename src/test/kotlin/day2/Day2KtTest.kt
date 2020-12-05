@@ -8,9 +8,9 @@ internal class Day2KtTest {
 
     @Test
     fun parsePassword() {
-        assertEquals(parsePassword("1-3 a: abcde"), Password("abcde", "a", 1, 3));
-        assertEquals(parsePassword("1-3 b: cdefg"), Password("cdefg", "b", 1, 3));
-        assertEquals(parsePassword("2-9 c: ccccccccc"), Password("ccccccccc", "c", 2, 9));
+        assertEquals(Password("abcde", "a", 1, 3), parsePassword("1-3 a: abcde"));
+        assertEquals(Password("cdefg", "b", 1, 3), parsePassword("1-3 b: cdefg"));
+        assertEquals(Password("ccccccccc", "c", 2, 9), parsePassword("2-9 c: ccccccccc"));
     }
 
     @Test

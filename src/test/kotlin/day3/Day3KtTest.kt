@@ -22,6 +22,6 @@ internal class Day3KtTest {
             "#.##...#...",
             "#...##....#",
             ".#..#...#.#")
-        assertEquals(calculateTreesHit(map, 0, 0, 3, 1), 7);
+        assertEquals(7, calculateTreesHit(map, 0, 0, 3, 1));
     }
 }

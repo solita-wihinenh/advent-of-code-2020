@@ -8,10 +8,10 @@ internal class Day1KtTest {
 
     @Test
     fun findProductForSum() {
-        assertNotEquals(findProductForSum(listOf(2020), 2, 2020), 2020)
-        assertEquals(findProductForSum(listOf(2020), 1, 2020), 2020)
-        assertEquals(findProductForSum(listOf(1721, 979, 366, 299, 675, 1456), 2, 2020), 514579)
-        assertEquals(findProductForSum(listOf(1721, 979, 366, 299, 675, 1456), 3, 2020), 241861950)
-        assertEquals(findProductForSum(listOf(190249, 10, 10, 1000, 1000), 4, 2020), 100000000)
+        assertNotEquals(2020, findProductForSum(listOf(2020), 2, 2020))
+        assertEquals(2020, findProductForSum(listOf(2020), 1, 2020))
+        assertEquals(514579, findProductForSum(listOf(1721, 979, 366, 299, 675, 1456), 2, 2020))
+        assertEquals(241861950, findProductForSum(listOf(1721, 979, 366, 299, 675, 1456), 3, 2020), )
+        assertEquals(100000000, findProductForSum(listOf(190249, 10, 10, 1000, 1000), 4, 2020), )
     }
 }
