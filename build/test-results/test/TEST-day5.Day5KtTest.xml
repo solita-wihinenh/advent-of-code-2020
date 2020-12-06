@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="day5.Day5KtTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-12-05T07:48:31" hostname="SOLPF1BEWPS" time="0.019">
-  <properties/>
-  <testcase name="decodeSeatId()" classname="day5.Day5KtTest" time="0.016"/>
-  <testcase name="decodeSeatColumn()" classname="day5.Day5KtTest" time="0.0"/>
-  <testcase name="decodeSeatRow()" classname="day5.Day5KtTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

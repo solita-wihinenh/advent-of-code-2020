@@ -9,7 +9,7 @@ fun main(args: Array<String>) {
 
     println("Part 1: ${seatIds.max()}")
 
-    for (i in 0 until seatIds.size) {
+    for (i in seatIds.indices) {
         if (seatIds[i] + 2 == seatIds[i+1]) {
             println("Part 2: ${seatIds[i] + 1}")
             break;
@@ -26,13 +26,13 @@ fun loadData(fileName: String): List<String> {
 }
 
 fun decodeSeatRow(seatCode: String): Int {
-    val rowStr = seatCode.substring(0, 7).replace('F', '0').replace('B', '1');
-    return Integer.parseInt(rowStr, 2)
+    val rowBinaryStr = seatCode.substring(0, 7).replace('F', '0').replace('B', '1');
+    return Integer.parseInt(rowBinaryStr, 2)
 }
 
 fun decodeSeatColumn(seatCode: String): Int {
-    val rowStr = seatCode.substring(7).replace('L', '0').replace('R', '1');
-    return Integer.parseInt(rowStr, 2)
+    val colBinaryStr = seatCode.substring(7).replace('L', '0').replace('R', '1');
+    return Integer.parseInt(colBinaryStr, 2)
 }
 
 fun decodeSeatId(seatCode: String): Int {

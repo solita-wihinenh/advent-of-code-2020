@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="day6.Day6KtTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-12-06T10:18:57" hostname="SOLPF1BEWPS" time="0.032">
+  <properties/>
+  <testcase name="part1()" classname="day6.Day6KtTest" time="0.016"/>
+  <testcase name="part2()" classname="day6.Day6KtTest" time="0.015"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
