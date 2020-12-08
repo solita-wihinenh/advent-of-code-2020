@@ -2,7 +2,7 @@ package day2
 
 import java.io.File
 
-fun main(args: Array<String>) {
+fun main() {
     println("Day 2 - Start!")
     val passwords = loadData("src/main/resources/day2.txt")
 

@@ -2,7 +2,7 @@ package day5
 
 import java.io.File
 
-fun main(args: Array<String>) {
+fun main() {
     println("Day 5 - Start!")
     val seatCodes = loadData("src/main/resources/day5.txt")
     val seatIds = seatCodes.map{seatCode -> decodeSeatId(seatCode)}.toList().sorted()

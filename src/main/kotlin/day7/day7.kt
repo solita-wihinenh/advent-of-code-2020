@@ -2,7 +2,7 @@ package day7
 
 import java.io.File
 
-fun main(args: Array<String>) {
+fun main() {
     println("Day 7 - Start!")
     val bags = loadData("src/main/resources/day7.txt")
 

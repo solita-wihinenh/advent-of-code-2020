@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="day8.Day8KtTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-12-08T13:11:39" hostname="SOLPF1BEWPS" time="0.016">
+  <properties/>
+  <testcase name="part1()" classname="day8.Day8KtTest" time="0.013"/>
+  <testcase name="part2()" classname="day8.Day8KtTest" time="0.001"/>
+  <system-out><![CDATA[Instruction(operation=nop, argument=0, row=0)
+Instruction(operation=acc, argument=1, row=1)
+Instruction(operation=jmp, argument=4, row=2)
+Instruction(operation=acc, argument=1, row=6)
+Instruction(operation=jmp, argument=-4, row=7)
+Instruction(operation=acc, argument=3, row=3)
+Instruction(operation=jmp, argument=-3, row=4)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

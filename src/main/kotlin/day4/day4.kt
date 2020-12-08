@@ -22,7 +22,7 @@ val part2fieldRegexes = listOf<Pair<String, Regex>>(
     Pair("pid", "^[0-9]{9}\$".toRegex()),
 )
 
-fun main(args: Array<String>) {
+fun main() {
     println("Day 4 - Start!")
     val passports = loadData("src/main/resources/day4.txt")
 

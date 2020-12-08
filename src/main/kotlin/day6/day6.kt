@@ -2,7 +2,7 @@ package day6
 
 import java.io.File
 
-fun main(args: Array<String>) {
+fun main() {
     println("Day 6 - Start!")
     val answersByGroup = loadData("src/main/resources/day6.txt")
 
