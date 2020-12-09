@@ -53,6 +53,8 @@ fun findContiguousRange(numbers: List<BigInteger>, targetSum: BigInteger): List<
             sum += numbers[j]
             if (sum == targetSum) {
                 return numbers.subList(i, j)
+            } else if (sum > targetSum) {
+                break;
             }
         }
     }
