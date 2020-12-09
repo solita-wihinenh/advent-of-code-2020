@@ -32,14 +32,14 @@ fun main() {
 
 fun loadData(fileName: String): List<Map<String, String>> {
     val list = mutableListOf<Map<String, String>>()
-    var passport = mutableMapOf<String, String>();
+    var passport = mutableMapOf<String, String>()
     File(fileName).forEachLine {
         if (it == "" && passport.isNotEmpty()) {
             list.add(passport)
-            passport = mutableMapOf<String, String>();
+            passport = mutableMapOf<String, String>()
         } else {
             val linePairs = parseTextIntoKeyValuePairs(it)
-            linePairs.forEach{ pair -> passport[pair.first] = pair.second}
+            linePairs.forEach { pair -> passport[pair.first] = pair.second }
         }
     }
     list.add(passport)
@@ -52,23 +52,23 @@ fun parseTextIntoKeyValuePairs(text: String): List<Pair<String, String>> {
     for (keyValueToken in keyValueTokens) {
         val tokens = keyValueToken.split(":")
         if (tokens.count() != 2) {
-            throw Error("Could not parse text into key-value token");
+            throw Error("Could not parse text into key-value token")
         }
         keyValuePairs.add(Pair(tokens[0], tokens[1]))
     }
     return keyValuePairs
 }
 
-fun countValidPassports(passports: List<Map<String, String>>, fieldRegex: List<Pair<String, Regex>>): Int {
-    var validPassports = 0;
+fun countValidPassports(passports: List<Map<String, String>>, fieldRegexes: List<Pair<String, Regex>>): Int {
+    var validPassports = 0
     for (passport in passports) {
         var passportIsValid = true
-        for (fieldRegex in fieldRegex) {
+        for (fieldRegex in fieldRegexes) {
             if (!passport.containsKey(fieldRegex.first) || !passport.getValue(fieldRegex.first)
                     .matches(fieldRegex.second)
             ) {
                 passportIsValid = false
-                break;
+                break
             }
         }
         if (passportIsValid) {

@@ -1,7 +1,0 @@
-/Instruction(operation=nop, argument=0, row=0)
-/Instruction(operation=acc, argument=1, row=1)
-/Instruction(operation=jmp, argument=4, row=2)
-/Instruction(operation=acc, argument=1, row=6)
-0Instruction(operation=jmp, argument=-4, row=7)
-/Instruction(operation=acc, argument=3, row=3)
-0Instruction(operation=jmp, argument=-3, row=4)

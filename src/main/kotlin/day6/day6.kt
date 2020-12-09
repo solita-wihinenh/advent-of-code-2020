@@ -17,7 +17,7 @@ fun loadData(fileName: String): List<List<String>> {
     File(fileName).forEachLine {
         if (it == "" && answersByPerson.isNotEmpty()) {
             answersByGroup.add(answersByPerson)
-            answersByPerson = mutableListOf<String>();
+            answersByPerson = mutableListOf<String>()
         } else {
             answersByPerson.add(it)
         }
@@ -27,16 +27,16 @@ fun loadData(fileName: String): List<List<String>> {
 }
 
 
-fun part1(answersByGroup: List<List<String>>) : Int {
-    val uniqueCharsByGroup = findUniqueCharsByGroup(answersByGroup);
+fun part1(answersByGroup: List<List<String>>): Int {
+    val uniqueCharsByGroup = findUniqueCharsByGroup(answersByGroup)
     val uniqueCharAmountByGroup = uniqueCharsByGroup.map { uniqueChars -> uniqueChars.count() }
-    return uniqueCharAmountByGroup.sum();
+    return uniqueCharAmountByGroup.sum()
 }
 
-fun part2(answersByGroup: List<List<String>>) : Int {
-    val commonCharsByGroup = findCommonCharsByGroup(answersByGroup);
+fun part2(answersByGroup: List<List<String>>): Int {
+    val commonCharsByGroup = findCommonCharsByGroup(answersByGroup)
     val commonCharAmountByGroup = commonCharsByGroup.map { commonChars -> commonChars.count() }
-    return commonCharAmountByGroup.sum();
+    return commonCharAmountByGroup.sum()
 }
 
 fun findUniqueCharsByGroup(answersByGroup: List<List<String>>): List<Set<Char>> {

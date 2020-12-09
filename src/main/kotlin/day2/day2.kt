@@ -15,12 +15,8 @@ fun main() {
 
 data class Password(val password: String, val text: String, val firstNum: Int, val secondNum: Int)
 
-fun loadData(fileName: String) : MutableList<Password> {
-    val list = mutableListOf<Password>()
-    File(fileName).forEachLine {
-        list.add(parsePassword(it))
-    }
-    return list
+fun loadData(fileName: String): List<Password> {
+    return File(fileName).readLines().map { string -> parsePassword(string) }.toList()
 }
 
 fun parsePassword(text: String): Password {
@@ -33,7 +29,7 @@ fun parsePassword(text: String): Password {
         ?: throw IllegalArgumentException("Invalid input '$text'")
 }
 
-fun getValidPasswords(passwords: MutableList<Password>, validator: (Password) -> Boolean) : MutableList<Password> {
+fun getValidPasswords(passwords: List<Password>, validator: (Password) -> Boolean): MutableList<Password> {
     val validPasswords = mutableListOf<Password>()
     for (password in passwords) {
         if (validator(password)) {
@@ -43,7 +39,7 @@ fun getValidPasswords(passwords: MutableList<Password>, validator: (Password) ->
     return validPasswords
 }
 
-fun part1validatePassword(pw: Password) : Boolean {
+fun part1validatePassword(pw: Password): Boolean {
     val req = pw.text
     val minAmount = pw.firstNum
     val maxAmount = pw.secondNum
@@ -52,15 +48,15 @@ fun part1validatePassword(pw: Password) : Boolean {
     return pw.password.contains(regex)
 }
 
-fun part2validatePassword(pw: Password) : Boolean {
+fun part2validatePassword(pw: Password): Boolean {
     val req = pw.text
     val firstPos = pw.firstNum
     val secondPos = pw.secondNum
 
-    val regexFirst = "^.{${firstPos-1}}[$req]".toRegex()
+    val regexFirst = "^.{${firstPos - 1}}[$req]".toRegex()
     val firstFound = pw.password.contains(regexFirst)
 
-    val regexSecond = "^.{${secondPos-1}}[$req]".toRegex()
+    val regexSecond = "^.{${secondPos - 1}}[$req]".toRegex()
     val secondFound = pw.password.contains(regexSecond)
 
     return (firstFound.xor(secondFound))

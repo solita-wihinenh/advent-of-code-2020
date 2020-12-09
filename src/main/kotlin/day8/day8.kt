@@ -72,8 +72,8 @@ fun runProgram(instructions: List<Instruction>): ProgramResult {
 }
 
 fun part2(instructions: List<Instruction>): Int {
-    val fixedInstructions = fixInstructions(instructions);
-    return runProgram(fixedInstructions).accumulator;
+    val fixedInstructions = fixInstructions(instructions)
+    return runProgram(fixedInstructions).accumulator
 }
 
 fun fixInstructions(instructions: List<Instruction>): List<Instruction> {

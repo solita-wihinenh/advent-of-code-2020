@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="day9.Day9KtTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-09T07:31:39" hostname="SOLPF1BEWPS" time="0.013">
+  <properties/>
+  <testcase name="part2()" classname="day9.Day9KtTest" time="0.013"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

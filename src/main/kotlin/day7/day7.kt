@@ -14,25 +14,40 @@ fun main() {
 data class Content(val bag: Bag, val amount: Int) {
     override fun toString(): String = bag.color
 }
-data class Bag(val color: String, val contents: MutableList<Content> = mutableListOf(), var isContentOf: MutableList<Bag> = mutableListOf()) {
+
+data class Bag(
+    val color: String,
+    val contents: MutableList<Content> = mutableListOf(),
+    var isContentOf: MutableList<Bag> = mutableListOf()
+) {
     override fun hashCode(): Int = this.color.hashCode()
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as Bag
+
+        if (color != other.color) return false
+
+        return true
+    }
 }
 
 fun loadData(fileName: String): List<Bag> {
     val bags = mutableListOf<Bag>()
     File(fileName).forEachLine {
-        var color = it.substringBefore(" bag")
-        var parentBag = bags.find{ bag -> bag.color == color}
+        val color = it.substringBefore(" bag")
+        var parentBag = bags.find { bag -> bag.color == color }
         if (parentBag == null) {
             parentBag = Bag(color)
             bags.add(parentBag)
         }
-        var childTokens = it.substringAfter(" contain ").substringBefore(".").split(", ")
+        val childTokens = it.substringAfter(" contain ").substringBefore(".").split(", ")
         if (childTokens.isNotEmpty() && childTokens[0] != "no other bags") {
             for (childToken in childTokens) {
                 val childAmount = childToken.substringBefore(" ").toInt()
                 val childColor = childToken.substringAfter(" ").substringBefore(" bag")
-                var childBag = bags.find{ bag -> bag.color == childColor}
+                var childBag = bags.find { bag -> bag.color == childColor }
                 if (childBag == null) {
                     childBag = Bag(childColor)
                     bags.add(childBag)
@@ -51,12 +66,12 @@ fun part1(bags: List<Bag>, color: String): Int {
     return getBagParents(bag).count()
 }
 
-fun findBag(bags: List<Bag>, color: String) : Bag {
+fun findBag(bags: List<Bag>, color: String): Bag {
     return bags.find { bag -> bag.color == color } ?: throw Error("No bag with given color")
 }
 
-fun getBagParents(bag: Bag) : Set<Bag> {
-    var parents = mutableSetOf<Bag>()
+fun getBagParents(bag: Bag): Set<Bag> {
+    val parents = mutableSetOf<Bag>()
     for (parent in bag.isContentOf) {
         parents.add(parent)
         parents.addAll(getBagParents(parent))
@@ -66,10 +81,10 @@ fun getBagParents(bag: Bag) : Set<Bag> {
 
 fun part2(bags: List<Bag>, color: String): Int {
     val bag = findBag(bags, color)
-    return getBagChildren(bag);
+    return getBagChildren(bag)
 }
 
-fun getBagChildren(bag: Bag) : Int {
+fun getBagChildren(bag: Bag): Int {
     var children = 0
     for (child in bag.contents) {
         children += child.amount
