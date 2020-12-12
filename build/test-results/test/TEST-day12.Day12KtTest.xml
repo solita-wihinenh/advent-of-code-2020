@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="day12.Day12KtTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-12-12T12:52:57" hostname="SOLPF1BEWPS" time="0.015">
+  <properties/>
+  <testcase name="part1()" classname="day12.Day12KtTest" time="0.011"/>
+  <testcase name="part2()" classname="day12.Day12KtTest" time="0.003"/>
+  <system-out><![CDATA[Moving dist 100,10 to 100,10
+Moving dist 70,28 to 170,38
+Rotating 90, original 10 4, new 4 -10
+Moving dist 44,-110 to 214,-72
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
