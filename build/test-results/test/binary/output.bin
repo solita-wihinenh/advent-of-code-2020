@@ -1,4 +1,4 @@
-Moving dist 100,10 to 100,10
-Moving dist 70,28 to 170,38
-'Rotating 90, original 10 4, new 4 -10
- Moving dist 44,-110 to 214,-72
+23
+moduli: [7, 13, 59, 31, 19]
+!remainders: [7, 12, 55, 25, 12]
+answer: 1068781
