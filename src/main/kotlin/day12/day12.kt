@@ -5,7 +5,7 @@ import java.io.File
 import java.lang.StrictMath.abs
 
 fun main() {
-    println("Day 11 - Start!")
+    println("Day 12 - Start!")
     val input = loadData("src/main/resources/day12.txt")
     println("Part 1: ${part1(input)}")
     println("Part 2: ${part2(input)}")

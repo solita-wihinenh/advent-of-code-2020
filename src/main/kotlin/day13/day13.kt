@@ -3,7 +3,7 @@ package day13
 import java.io.File
 
 fun main() {
-    println("Day 11 - Start!")
+    println("Day 13 - Start!")
     val input = loadData("src/main/resources/day13.txt")
     println("Part 1: ${part1(input)}")
     println("Part 2: ${part2(input)}")
