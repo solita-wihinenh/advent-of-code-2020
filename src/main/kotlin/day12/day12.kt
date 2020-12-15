@@ -96,13 +96,13 @@ data class Ship(var x: Int = 0, var y: Int = 0, var heading: Int = 90, var waypo
 }
 
 fun part1(input: List<Instruction>): Int {
-    val ship = Ship();
+    val ship = Ship()
     input.forEach { ship.executeInstruction(it) }
     return abs(ship.x) + abs(ship.y)
 }
 
 fun part2(input: List<Instruction>): Int {
-    val ship = Ship();
+    val ship = Ship()
     input.forEach { ship.executeWaypointInstruction(it) }
     return abs(ship.x) + abs(ship.y)
 }

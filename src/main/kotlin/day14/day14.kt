@@ -81,7 +81,7 @@ fun maskMemAdd(mask: String, memAdd: Long): List<Long> {
     val bits = (memAdd.toString(2)).padStart(36, '0')
     var resultBitsList = mutableListOf(bits)
     for (i in mask.indices) {
-        var nextList = mutableListOf<String>()
+        val nextList = mutableListOf<String>()
         for (resultBits in resultBitsList) {
             when (mask[i]) {
                 '1' -> nextList.add(resultBits.replaceRange(i,i+1, "1"))
@@ -97,9 +97,9 @@ fun maskMemAdd(mask: String, memAdd: Long): List<Long> {
 
     println("value:  $bits  (decimal $memAdd)")
     println("mask:   $mask")
-    var resultList = mutableListOf<Long>()
+    val resultList = mutableListOf<Long>()
     for (resultBits in resultBitsList) {
-        var result = BigInteger(resultBits, 2).toLong()
+        val result = BigInteger(resultBits, 2).toLong()
         resultList.add(result)
         println("result: $resultBits  (decimal $result)")
     }

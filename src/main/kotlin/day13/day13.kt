@@ -57,7 +57,7 @@ fun multInv(a: Long, b: Long): Long {
 fun chineseRemainder(n: List<Long>, a: List<Long>): Long {
     val prod = n.fold(1L) { acc, i -> acc * i }
     var sum = 0L
-    for (i in 0 until n.size) {
+    for (i in n.indices) {
         val p = prod / n[i]
         sum += a[i] * multInv(p, n[i]) * p
     }
