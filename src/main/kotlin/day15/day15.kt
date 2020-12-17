@@ -1,5 +1,7 @@
 package day15
 
+import java.time.LocalDateTime
+
 fun main() {
     println("Day 15 - Start!")
     println("Part 1: ${part1(listOf(11, 0, 1, 10, 5, 19), 2020)}")
