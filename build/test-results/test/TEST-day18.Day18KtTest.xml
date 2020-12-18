@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="day18.Day18KtTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-12-18T19:18:09" hostname="SOLPF1BEWPS" time="0.075">
+  <properties/>
+  <testcase name="part1()" classname="day18.Day18KtTest" time="0.07"/>
+  <testcase name="part2()" classname="day18.Day18KtTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
